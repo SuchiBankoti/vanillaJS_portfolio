@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  --font-col: black;
+  --main-headings: 5rem;
+  --sub-headings: 2rem;
+  --links-other: 1.25rem;
+  background-color: whitesmoke;
+  --sec-height: 100vh;
+  --sec-width: 1500px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--font-col);
+}
+#profile,
+#projects,
+#skills {
+  height: var(--sec-height);
+  width: var(--sec-width);
+  padding: 20px;
+}
+#navbar {
+  height: 10vh;
+  width: 100%;
+  font-size: var(--links-other);
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+}
+
+#navbar > div {
+  width: 100px;
+  padding: 20px;
+  margin-right: 80px;
+  color: white;
+}
+#navbar > :first-child {
+  width: 60%;
+  margin-left: 150px;
+  color: black;
+}
+#profile {
+  position: relative;
+}
+#profile::after {
+  content: "";
+  position: absolute;
+  width: 1100px;
+  height: 250px;
+  bottom: 200px;
+  right: 0;
+  background-color: rgb(247, 56, 4);
+  opacity: 0.65;
+}
+.front-heading {
+  position: absolute;
+  left: -150px;
+  top: 300px;
+  font-size: var(--main-headings);
+  animation-name: up-down;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  rotate: 90deg;
+  font-family: "Major Mono Display", monospace;
+  font-weight: 600;
+}
+@keyframes up-down {
+  0% {
+    transform: translateX(-500px);
+  }
+
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+.dev-heading {
+  position: absolute;
+  bottom: 150px;
+  left: 80px;
+  font-size: var(--main-headings);
+  font-family: "Major Mono Display", monospace;
+  font-weight: 600;
+  animation-name: right-to-left;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes right-to-left {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.name-container {
+  position: absolute;
+  right: 150px;
+  top: 100px;
+  width: 100px;
+  height: 100px;
+}
+.span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  border-left: 1px solid white;
+}
+.name {
+  word-wrap: break-word;
+  padding: 10px;
+  animation-name: name;
+  animation-duration: 2s;
+  font-size: var(--links-other);
+  font-family: "Abril Fatface", cursive;
+  /* font-family: "Orbitron", sans-serif; */
+  color: white;
+}
+@keyframes name {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.about {
+  position: absolute;
+  left: 400px;
+  top: 20px;
+  font-size: 0.6rem;
+}
+.about > div {
+  font-size: 1.3rem;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+  font-family: "Rajdhani", sans-serif;
+}
+.background {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: whitesmoke;
+}
+.profile-image-container {
+  width: 1000px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.profile-image-container > img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
