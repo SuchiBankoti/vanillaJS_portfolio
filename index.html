@@ -5,40 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bahianita&family=Big+Shoulders+Display:wght@800&family=Karantina&family=Major+Mono+Display&family=Megrim&family=Monoton&family=Oswald:wght@300&family=Rajdhani:wght@600&family=Truculenta&family=Tulpen+One&family=Wire+One&display=swap" rel="stylesheet">
-    <title>Portness</title>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="skills.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bahianita&family=Big+Shoulders+Display:wght@800&family=Karantina&family=Major+Mono+Display&family=Megrim&family=Monoton&family=Oswald:wght@300&family=Rajdhani:wght@600&family=Truculenta&family=Tulpen+One&family=Wire+One&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d0eef39cb5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>SuchiBankoti-Portfolio</title>
   </head>
-  <body>
+  <body id="root">
     <div class="main">
       <div id="navbar">
-        <div>Profile</div>
-        <div>Projects</div>
-        <div>Skills</div>
+        <div class="home">Home</div>
+        <div class="page-links">
+          <a href="#profile" class="link">Profile</a>
+          <a href="#projects" class="link">Projects</a>
+          <a href="#skills" class="link">Skills</a>
+        </div>
       </div>
       <div id="profile">
-        <div class="front-heading">FrontEnd.</div>
-        <div class="dev-heading">Dev</div>
-        <div class="name-container">
-          <span class="span"></span>
-          <div class="name">I Am Suchi Bankoti</div>
+        <div class="title">
+        <div class="front">FRONTEND</div>
+        <div class="dev">DEV</div>
         </div>
         <div class="about">
-          <div>About-Me</div>
-          <p>some random stuff about myself
+          <div class="content">
+          <h3>About-Me</h3>
+          <p>
+            Self-taught web developer utterly interested to dive deeper into the
+            craft & tech regarding web apps. I'm looking for the opportunity to
+            broaden my knowledge base & work with innovative people in the
+            industry
           </p>
-          <p>random stuff about react javacdscroo mafyt</p>
+        </div>
         </div>
       </div>
-      <div id="projects">projects</div>
-      <div id="skills">skills</div>
-    </div>
-    <div class="background">
-      <div class="profile-image-container">
-        <img src="images/sw.png" alt="blackgold"></img>
+      <div id="projects">
+        <div class="project-content">
+        <div class="git">
+          <div class="git-icon">
+            <a class="fa fa-github" href="https://github.com/SuchiBankoti" target="_blank"></a>
+          </div>
+        </div>
+        <div class="project-slider">
+          <button id="prevButton">
+            <a class="fas fa-angle-double-left"></a>
+          </button>
+          <div id="scrollerContainer"></div>
+          <button id="nextButton">
+            <a class="fas fa-angle-double-right"></a>
+          </button>
+        </div>
+        <div class="project-title-container">
+        <div class="project-title">PROJECTS</div>
+      </div>
+      </div>
+      </div>
+      <div id="skills">
+        <div class="skill-heading">.Skills</div>
+          <div class="skill-set"></div>
+        </div>
       </div>
     </div>
+    <div class="background">
+      <div class="profile-image-container"></div>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace()
+    </script>
+    <script src="main.js"></script>
   </body>
 </html>

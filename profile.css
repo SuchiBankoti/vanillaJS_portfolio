@@ -1,0 +1,109 @@
+body{
+  overflow: hidden;
+}
+
+#profile {
+  display: flex;
+  position: relative;
+}
+#profile::before {
+  position: absolute;
+  top: -110px;
+  left: -110px;
+  content: "";
+  width: 510px;
+  height: 510px;
+  border-radius: 50%;
+  border: 1px solid black;
+  z-index: 1;
+}
+.title {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  position: relative;
+  top: 70px;
+  left: 0;
+}
+.title::before {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  content: "";
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: rgb(240, 175, 96);
+}
+.front,
+.dev {
+  width: fit-content;
+  height: fit-content;
+  letter-spacing: 2px;
+}
+.front {
+  position: absolute;
+  right: 150px;
+  top: 250px;
+  font-size: var(--main-headings);
+  rotate: 270deg;
+}
+
+.dev {
+  position: absolute;
+  bottom: 320px;
+  right: 200px;
+  font-size: var(--sub-headings);
+}
+
+.about {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+.content {
+  position: absolute;
+  top: 200px;
+  right: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+.about::before {
+  content: "";
+  width: 800px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  bottom: 200px;
+}
+.content > h3 {
+  width: 100%;
+  text-align: left;
+}
+.content::before {
+  position: absolute;
+  top: -10px;
+  left: -85px;
+  z-index: -1;
+  content: "";
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(240, 211, 176);
+}
+.about::before {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  z-index: -1;
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(245, 230, 211);
+}

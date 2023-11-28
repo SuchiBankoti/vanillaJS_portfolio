@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+#projects {
+  padding: 0;
+  position: relative;
+}
+.project-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 15px;
+}
+.project-title {
+  width: fit-content;
+  height: fit-content;
+  letter-spacing: 2px;
+  position: absolute;
+  right: -100px;
+  top: 350px;
+  font-size: var(--main-headings);
+  rotate: 90deg;
+}
+.project-slider {
+  width: 800px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 300px;
+  top: 10px;
+}
+
+#scrollerContainer {
+  width: 800px;
+  height: 500px; /* Adjust as needed */
+  overflow: hidden;
+  white-space: nowrap;
+}
+.project-item {
+  display: inline-block;
+  width: 170px;
+  height: 500px;
+  background-color: #e0e0e0;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: rgb(240, 175, 96);
+}
+.project-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 50px;
+
+}
+.project-links{
+  display:flex;
+  gap:20px;
+}
+.project-links>a{
+  color: black;
+}
+.project-name{
+  text-transform: capitalize;
+  font-family:Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+.git {
+  width: 100px;
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+.git-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.git-icon>a{
+  color: black;
+}
+.git-icon::after {
+  content: "";
+  height: 300px;
+  width: 1px;
+  background-color: black;
+  position: absolute;
+  top: 70px;
+  left: 50px;
+}
+#prevButton, #nextButton{
+ border: 0px;
+ background: transparent;
+ 
+}
+img{
+  width: 50px;
+  height: 50px;
+}
